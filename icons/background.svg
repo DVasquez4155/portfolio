@@ -1,0 +1,14 @@
+<svg width='8' height='3' viewBox='0 0 8 3' xmlns="http://www.w3.org/2000/svg" xmlns:xlink= "http://www.w3.org/1999/xlink">
+                        
+    <!--Background-->
+    <defs>
+        <linearGradient id='background' x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stop-color="#022052" />
+            <stop offset="100%" stop-color="#010f20" />
+        </linearGradient>
+    </defs>
+    <rect x='0' y='0' width='8' height='3' fill='url(#background)' fill-opacity="0.75"/>
+    <!--Shapes-->
+
+
+</svg>
