@@ -34,17 +34,7 @@
     <article>
         <h2>Portfolio</h2>
         <hr>
-        <div class="container">
-            <div class="row">
-                <img class='col-sm' src='https://via.placeholder.com/200' alt='Profile Picture' />
-                <img class='col-sm' src='https://via.placeholder.com/200' alt='Profile Picture' />
-                <img class='col-sm' src='https://via.placeholder.com/200' alt='Profile Picture' />
-                </div>
-            <div class="row">
-                <img class='col-sm' src='https://via.placeholder.com/200' alt='Profile Picture' />
-                <img class='col-sm' src='https://via.placeholder.com/200' alt='Profile Picture' />
-                <img class='col-sm' src='https://via.placeholder.com/200' alt='Profile Picture' />
-            </div>
+        <div class="container" id='sites'>
         </div>
     </article>
     
@@ -73,6 +63,42 @@
     </script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script>
+    <script>
+        var sites = ["Password-Generator","Code-Quiz","Day-Planner"];
+        var numberOfSites = sites.length;
+        var container = $("#sites");
+        var divContainer;
+        sites.forEach(function(site) {
+            var siteName = site.split('-').join(' ');
+            if (sites.indexOf(site)%3 == 0) {
+                divContainer = document.createElement('div');
+                $(divContainer).addClass("row justify-content-center");
+                container.append(divContainer);
+            }
+            var link = document.createElement('a');
+            $(link).addClass('col col-sm-3 m-2 p-0')
+            .attr('href', "" + site);
+            divContainer.append(link);
+            var imgContainer = document.createElement('img');
+            
+            $(imgContainer)
+            .addClass('img-responsive')
+            .attr("src", "assets/images/blank.png")
+            .attr("alt", siteName);
+            var img = new Image;
+            var imgSrc = "../" + site + "/assets/images/icon.png";
+            img.src = imgSrc;
+            link.append(imgContainer);
+            img.onload = function() {
+                imgContainer.src = this.src;
+            }
+            img.onerror = function() {
+                $(link).append('<div style="position: absolute; top: 45%;  width: 100%; text-align: center;><span class="dark">'+ siteName +'</span></div>')
+            }
+            
+
+        });
     </script>
 </body>
 
