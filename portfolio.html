@@ -65,40 +65,52 @@
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
     </script>
     <script>
-        var sites = ["Password-Generator","Code-Quiz","Day-Planner", "Weather-Dashboard"];
-        var numberOfSites = sites.length;
         var container = $("#sites");
-        var divContainer;
-        sites.forEach(function(site) {
-            var siteName = site.split('-').join(' ');
-            if (sites.indexOf(site)%3 == 0) {
-                divContainer = document.createElement('div');
-                $(divContainer).addClass("row justify-content-center");
-                container.append(divContainer);
-            }
-            var link = document.createElement('a');
-            $(link).addClass('col col-sm-3 m-2 p-0')
-            .attr('href', "" + site);
-            divContainer.append(link);
-            var imgContainer = document.createElement('img');
-            
-            $(imgContainer)
-            .addClass('img-responsive')
-            .attr("src", "assets/images/blank.png")
-            .attr("alt", siteName);
-            var img = new Image;
-            var imgSrc = "../" + site + "/assets/images/icon.png";
-            img.src = imgSrc;
-            link.append(imgContainer);
-            img.onload = function() {
-                imgContainer.src = this.src;
-            }
-            img.onerror = function() {
-                $(link).append('<div style="position: absolute; top: 45%;  width: 100%; text-align: center;><span class="dark">'+ siteName +'</span></div>')
-            }
+        var site = {
+            2016 : ['Portfolio-V1','Portfolio-V2', 'Humanity-Helping-Homeless'],
+            2020 : ["Password-Generator","Code-Quiz","Day-Planner", "Weather-Dashboard"]
+        };
+        Object.keys(site).forEach(
+            function(currentSite){
+                var yearSites = site[currentSite];
+                    console.log(site[currentSite])
+                    portfolioEntries(currentSite, site[currentSite])
+                })
+        function portfolioEntries(year, entires) {
+            container.append('<h1>' + year + '</h1>')
+            var numberOfSites = entires.length;
+            var divContainer;
+            entires.forEach(function(site) {
+                var siteName = site.split('-').join(' ');
+                if (entires.indexOf(site)%3 == 0) {
+                    divContainer = document.createElement('div');
+                    $(divContainer).addClass("row justify-content-center");
+                    container.append(divContainer);
+                }
+                var link = document.createElement('a');
+                $(link).addClass('col col-sm-3 m-2 p-0')
+                .attr('href', "" + site);
+                divContainer.append(link);
+                var imgContainer = document.createElement('img');
+                
+                $(imgContainer)
+                .addClass('img-responsive')
+                .attr("src", "assets/images/blank.png")
+                .attr("alt", siteName);
+                var img = new Image;
+                var imgSrc = "../" + site + "/assets/images/icon.png";
+                img.src = imgSrc;
+                link.append(imgContainer);
+                img.onload = function() {
+                    imgContainer.src = this.src;
+                }
+                img.onerror = function() {
+                    $(link).append('<div style="position: absolute; top: 45%;  width: 100%; text-align: center;><span class="dark">'+ siteName +'</span></div>')
+                }
             
 
         });
+        }
     </script>
 </body>
 
