@@ -70,7 +70,14 @@ p.center {
     bottom: 0;
     width: 100%;
 }
-
+nav > a {
+    background-color: rgb(255, 255, 255);
+    display: inline-block;
+    transition: background-color 0.5s ease 0s;
+    height: 5em;
+    padding: 1.5em;
+    padding-bottom: 0;
+}
 
 .right { 
     text-align: right;
@@ -86,7 +93,4 @@ p.center {
 }
 .icon:hover {
     filter: grayscale(0%) brightness(100%);
-}
-.card {
-    margin-bottom: 1rem;
 }
