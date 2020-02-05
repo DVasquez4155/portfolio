@@ -35,6 +35,7 @@
         <h2>Portfolio</h2>
         <hr>
         <div class="container" id='sites'>
+            <div class="row"></div>
         </div>
     </article>
     
@@ -77,37 +78,61 @@
                     portfolioEntries(currentSite, site[currentSite])
                 })
         function portfolioEntries(year, entires) {
-            container.append('<h1>' + year + '</h1>')
+            container.append('<h1 class="row">' + year + '</h1>')
             var numberOfSites = entires.length;
             var divContainer;
+            
+            var mainContainer = document.createElement('div');
+                $(mainContainer).addClass('row');
+                $(container).append(mainContainer);
+
             entires.forEach(function(site) {
                 var siteName = site.split('-').join(' ');
-                if (entires.indexOf(site)%3 == 0) {
-                    divContainer = document.createElement('div');
-                    $(divContainer).addClass("row justify-content-center");
-                    container.append(divContainer);
-                }
-                var link = document.createElement('a');
-                $(link).addClass('col col-sm-3 m-2 p-0')
-                .attr('href', "" + site);
-                divContainer.append(link);
+                divContainer = document.createElement('div');
+                $(divContainer).addClass("col-md-4");
+
+                $(mainContainer).append(divContainer);
+
+                var cardContainer = document.createElement('div');
+                $(cardContainer).addClass('card md-4 shadow-sm');
+                $(divContainer).append(cardContainer);
+                var cardBody = document.createElement('div');
+                $(cardBody).addClass('card-body');
+
+
                 var imgContainer = document.createElement('img');
                 
                 $(imgContainer)
-                .addClass('img-responsive')
+                .addClass('bd-placeholder-img card-img-top')
                 .attr("src", "assets/images/blank.png")
                 .attr("alt", siteName);
                 var img = new Image;
-                var imgSrc = "../" + site + "/assets/images/icon.png";
+                var imgSrc = site + "/assets/images/icon.png";
                 img.src = imgSrc;
-                link.append(imgContainer);
+                $(cardContainer).append(imgContainer);
                 img.onload = function() {
                     imgContainer.src = this.src;
                 }
                 img.onerror = function() {
-                    $(link).append('<div style="position: absolute; top: 45%;  width: 100%; text-align: center;><span class="dark">'+ siteName +'</span></div>')
+                    $(cardContainer).append('<div style="position: absolute; top: 45%;  width: 100%; text-align: center;><span class="dark">'+ siteName +'</span></div>')
                 }
-            
+
+                $(cardContainer).append(cardBody);
+                var cardText = document.createElement('p');
+                $(cardText)
+                .addClass('card-text')
+                .html(siteName);
+                $(cardBody).append(cardText);
+                var buttonGroup = document.createElement('div');
+                $(buttonGroup).addClass('d-flex justify-content-between align-items-center btn-group')
+                $(cardBody).append(buttonGroup);
+                var btn = document.createElement('a');
+                $(btn)
+                .addClass('btn btn-sm btn-outline-secondary')
+                .attr('type', 'buton')
+                .attr('href', './' + site)
+                .html('View');
+                $(buttonGroup).append(btn);
 
         });
         }
