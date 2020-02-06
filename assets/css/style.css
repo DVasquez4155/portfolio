@@ -100,3 +100,6 @@ nav > a {
 .icon:hover {
     filter: grayscale(0%) brightness(100%);
 }
+.card {
+    margin-bottom: 1em;
+}
