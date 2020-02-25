@@ -6,3 +6,15 @@
   color: white;
 }
 
+body {
+  background-image: url("../../assets/img/spikes.png");
+}
+
+.portfolio-block form {
+  background: white;
+}
+
+.portfolio-info-card {
+  background-color: white;
+}
+
