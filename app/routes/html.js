@@ -1,7 +1,3 @@
-// Dependencies
-const db = require("../models");
-const isAuthenticated = require("../config/middleware/isAuthenticated");
-// Routes
 module.exports = function (app) {
     app.get("/", function (req, res) {
         res.sendFile('views/index.html', {root: process.cwd() })
