@@ -13,7 +13,7 @@ module.exports = (form) => {
             rejectUnauthorized: false
         }
     });
-    const source = fs.readFileSync(`${process.cwd()}/views/index.html`, 'utf8');
+    const source = fs.readFileSync(`${process.cwd()}/views/mail.html`, 'utf8');
     const template = Handlebars.compile(source);
     const context = {message:form.message, time: form.time};
     const html = template(context);
