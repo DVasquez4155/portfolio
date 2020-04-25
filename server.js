@@ -3,22 +3,27 @@
 // *********************************************************************************
 
 // Requiring necessary npm packages
-var express = require("express");
+const express = require("express");
+const compression = require('compression');
+var bodyParser = require('body-parser');
 // Sets up the Express App
 // =============================================================
 var app = express();
 var PORT = process.env.PORT || 8080;
 
+// compress all responses
+app.use(compression());
+
 // Sets up the Express app to handle data parsing
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
 // Static directory
-app.use(express.static("app/public"));
+app.use(express.static("public"));
 
-app.use('/js', express.static(__dirname + '/node_modules/bootstrap/dist/js')); // redirect bootstrap JS
-app.use('/js', express.static(__dirname + '/node_modules/jquery/dist')); // redirect JS jQuery
-app.use('/css', express.static(__dirname + '/node_modules/bootstrap/dist/css')); // redirect CSS bootstrap
+// app.use('/assets/bootstrap/js', express.static(__dirname + '/node_modules/bootstrap/dist/js')); // redirect bootstrap JS
+// app.use('/assets/js', express.static(__dirname + '/node_modules/jquery/dist')); // redirect JS jQuery
+// app.use('/assets/bootstrap/css', express.static(__dirname + '/node_modules/bootstrap/dist/css')); // redirect CSS bootstrap
 
 // Routes
 require("./app/routes/api.js")(app);

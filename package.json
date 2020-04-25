@@ -18,8 +18,13 @@
   },
   "homepage": "https://github.com/DVasquez4155/dvasquez4155.github.io#readme",
   "dependencies": {
+    "body-parser": "^1.19.0",
     "bootstrap": "^4.4.1",
+    "compression": "^1.7.4",
     "express": "^4.17.1",
-    "jquery": "^3.5.0"
+    "handlebars": "^4.7.6",
+    "jquery": "^3.5.0",
+    "moment": "^2.24.0",
+    "nodemailer": "^6.4.6"
   }
 }
