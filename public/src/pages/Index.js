@@ -6,7 +6,8 @@ class Index extends Component {
     return (
     <main className="page landing-page">
         <PorfolioBlock>
-            <p>Hello! I am <strong>Daniel V. Talavera</strong>. I enjoy computer coding and working.<br />Thank you for taking your time going through my website.</p>
+            <p>Hello! I am <strong>Daniel Vasquez</strong>. I enjoy computer coding and working.<br /> I am a passionate Restaurant Manager, dedicated to recruiting top talent, analyzing sales trends, and advocating for safety and quality. Currently, I am pursuing a bachelor's degree in Cyber Security at Western Governors University (WGU).</p>
+            <p>Thank you for taking your time going through my website.</p>
         </PorfolioBlock>
         <div className="social-icons">
             <h2>Skills</h2>
@@ -42,6 +43,27 @@ class Index extends Component {
                 <figcaption className="figure-caption">Java</figcaption>
             </figure>
         </div>
+
+        <div className="social-icons">
+            <h2>Certifications</h2>
+            <hr />
+            <div className="badge-holder">
+                <div id="badge">
+                    <a target="_blank" href="https://www.credly.com/badges/7a4ee715-e7c2-4429-bb29-e75a57820ca2/embedded">
+                        <img width="105" height="105" alt="" src="https://images.credly.com/images/63482325-a0d6-4f64-ae75-f5f33922c7d0/CompTIA_A_2Bce.png" />
+                            <span id="badge-name">CompTIA A+</span>
+                    </a><div id="badge-issuer" title="CompTIA">
+                    Issuer: CompTIA
+                    </div>
+                </div>
+                <div id="provided">
+                    <a target="_blank" href="/">PROVIDED BY
+                    <span>Credly</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <br />
         {/* <div data-aos="fade" className="simple-slider">
             <div className="swiper-container">
                 <div className="swiper-wrapper">

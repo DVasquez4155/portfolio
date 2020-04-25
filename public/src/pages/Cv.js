@@ -10,13 +10,9 @@ class Error extends Component {
     render() {
     return (
     <main className="page cv-page">
-        <PorfolioBlock>
-            <p>
-                Hello! I am <strong>Daniel Vasquez</strong>. I enjoy learning new things and working with others.
-                <br/>
-                <strong>Passionate Restaurant Manager | Recruiting Top Talent | Sales Trend Analyst | Safety & Quality Advocate</strong>
-            </p>
-        </PorfolioBlock>
+    <PorfolioBlock>
+        <p>Hello! I am <strong>Daniel Vasquez</strong>. I enjoy computer coding and working.<br /> I am a passionate Restaurant Manager, dedicated to recruiting top talent, analyzing sales trends, and advocating for safety and quality. Currently, I am pursuing a bachelor's degree in Cyber Security at Western Governors University (WGU).</p>
+    </PorfolioBlock>
         <section className="portfolio-block cv">
             <Container>
                 <div data-aos="fade" className="work-experience group">
@@ -47,14 +43,14 @@ class Error extends Component {
                         })
                     )}
                 </div>
-                <div className="text-center"><a data-bs-hover-animate="pulse" className="btn btn-secondary" href="assets/downloads/resume.pdf">Download my Resume</a>
+                <div className="text-center"><a data-bs-hover-animate="pulse" className="btn btn-secondary" href="assets/downloads/Daniel-Vasquez-Restaurant-Manager-Resume.pdf">Download my Resume</a>
                     <hr />
                 </div>
                 <div className="contact-info portfolio-info-card">
                     <h2>Contact Info</h2>
                     <Row>
                         <div className="col-1"><i className="icon ion-person icon"></i></div>
-                        <div className="col-9"><span>Daniel Vasquez Talavera</span></div>
+                        <div className="col-9"><span>Daniel Vasquez</span></div>
                     </Row>
                     {/* <Row>
                         <div className="col-1"><i className="icon ion-ios-telephone icon"></i></div>
@@ -62,7 +58,7 @@ class Error extends Component {
                     </Row> */}
                     <Row>
                         <div className="col-1"><i className="icon ion-at icon"></i></div>
-                        <div className="col-9"><span>main@dvasquez4155.com</span></div>
+                        <div className="col-9"><span>contact@dvas4155.com</span></div>
                     </Row>
                 </div>
             </Container>

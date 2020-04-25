@@ -10,7 +10,7 @@ function Navbar() {
           <a className="linkedin" href="https://www.linkedin.com/in/dvasquezt">
             <i className="icon ion-social-linkedin"></i>
           </a>
-          <a className="text-success" href="mailto:main@dvasquez4155.com">
+          <a className="text-success" href="mailto:contact@dvas4155.com">
             <i className="icon ion-email"></i>
           </a>
           <a className="instagram" href="https://www.instagram.com/wdan193/">
