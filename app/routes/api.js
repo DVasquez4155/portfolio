@@ -1,9 +1,6 @@
 const mail = require("../form/mail");
 const moment = require('moment-timezone');
 module.exports = function (app) {
-    app.get(process.env.route, function(req, res) {
-        res.send(process.env.cert)
-    })
     app.post("/api/contact", (req, res) => {
         console.log(req.body)
         mail({
