@@ -19,7 +19,7 @@ module.exports = (form) => {
     const html = template(context);
     const mailOptions = {
         from: `"${form.name}" <${form.email}>`,
-        to: process.env.email_email,
+        to: process.env[form.uuid] || process.env.email,
         subject: form.subject,
         text: form.message,
         html: html
