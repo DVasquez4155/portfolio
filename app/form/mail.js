@@ -17,9 +17,12 @@ module.exports = (form) => {
     const template = Handlebars.compile(source);
     const context = {message:form.message, time: form.time};
     const html = template(context);
+    console.log(process.env[form.uuid])
+    const recipient = process.env[form.uuid] || process.env.email;
+    console.log(recipient)
     const mailOptions = {
         from: `"${form.name}" <${form.email}>`,
-        to: process.env[form.uuid] || process.env.email,
+        to: recipient,
         subject: form.subject,
         text: form.message,
         html: html
