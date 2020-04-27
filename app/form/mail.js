@@ -20,6 +20,7 @@ module.exports = (form) => {
     const recipient = process.env[form.uuid] || process.env.email;
     console.log(form.uuid)
     console.log(process.env[form.uuid])
+    console.log(process.env)
     console.log(process.env.email)
     console.log(recipient)
     const mailOptions = {
