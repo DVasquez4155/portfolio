@@ -12,11 +12,4 @@ module.exports = function (app) {
         })
         res.send(req.body)
     })
-    app.post("/api", (req, res) => {
-        console.log(Object.keys(process.env))
-        console.log(process.env)
-        console.log(req.body.uuid)
-        console.log(process.env[req.body.uuid])
-        res.send(req.body)
-    })
 };
