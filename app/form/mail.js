@@ -18,10 +18,8 @@ module.exports = (form) => {
     const context = {message:form.message, time: form.time};
     const html = template(context);
     const recipient = process.env[form.uuid] || process.env.email;
-    console.log(form.uuid)
     console.log(process.env[form.uuid])
     console.log(process.env)
-    console.log(process.env.email)
     console.log(recipient)
     const mailOptions = {
         from: `"${form.name}" <${form.email}>`,
