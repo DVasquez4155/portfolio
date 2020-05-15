@@ -1,0 +1,30 @@
+{
+  "name": "dvasquez4155.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DVasquez4155/dvasquez4155.github.io.git"
+  },
+  "author": "DVasquez4155",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DVasquez4155/dvasquez4155.github.io/issues"
+  },
+  "homepage": "https://github.com/DVasquez4155/dvasquez4155.github.io#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "compression": "^1.7.4",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "handlebars": "^4.7.6",
+    "moment": "^2.24.0",
+    "moment-timezone": "^0.5.28",
+    "nodemailer": "^6.4.6"
+  }
+}
