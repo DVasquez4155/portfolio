@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"name": "react-portfolio",
+			"path": "."
+		},
+		{
+			"name": "api",
+			"path": "api"
+		},
+		{
+			"name": "public",
+			"path": "public"
+		}
+	]
+}
