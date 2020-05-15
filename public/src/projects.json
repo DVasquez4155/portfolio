@@ -1,0 +1,110 @@
+[
+    {
+        "name": "Portfolio Version 1",
+        "url" : "https://dvasquez4155.github.io/Portfolio-V1",
+        "github": "https://github.com/DVasquez4155/Portfolio-V1",
+        "image": "https://dvasquez4155.github.io/Portfolio-V1/assets/images/icon.png",
+        "time": 2016
+    },
+    {
+        "name": "Portfolio Version 2",
+        "url" : "https://dvasquez4155.github.io/Portfolio-V2",
+        "github": "https://github.com/DVasquez4155/Portfolio-V2",
+        "image" : "https://dvasquez4155.github.io/Portfolio-V2/assets/images/icon.png",
+        "time": 2016
+    },
+    {
+        "name": "Humanity Helping Homeless",
+        "url" : "https://dvasquez4155.github.io/Humanity-Helping-Homeless",
+        "github": "https://github.com/DVasquez4155/Humanity-Helping-Homeless",
+        "image" : "https://dvasquez4155.github.io/Humanity-Helping-Homeless/assets/images/icon.png",
+        "time": 2016
+    },
+    {
+        "name": "Password Generator",
+        "url" : "https://dvasquez4155.github.io/Password-Generator",
+        "github": "https://github.com/DVasquez4155/Password-Generator",
+        "image" : "https://dvasquez4155.github.io/Password-Generator/assets/images/icon.png",
+        "time": 2020
+    },
+    {
+        "name": "Coding Quiz",
+        "url" : "https://dvasquez4155.github.io/Code-Quiz",
+        "github" : "https://github.com/DVasquez4155/Code-Quiz",
+        "image" : "https://dvasquez4155.github.io/Code-Quiz/assets/img/icon.png",
+        "time": 2020
+    },
+    {
+        "name": "Day Planner",
+        "url" : "https://dvasquez4155.github.io/Day-Planner",
+        "github" : "https://github.com/DVasquez4155/Day-Planner",
+        "image" : "https://dvasquez4155.github.io/Day-Planner/assets/images/icon.png",
+        "time": 2020
+    },
+    {
+        "name": "Weather Dashboard",
+        "url" : "https://dvasquez4155.github.io/Weather-Dashboard",
+        "github" : "https://github.com/DVasquez4155/Weather-Dashboard",
+        "image" : "https://dvasquez4155.github.io/Weather-Dashboard/assets/images/icon.png",
+        "time": 2020
+    },
+    {
+        "name": "Precious Metals Calculator",
+        "url" : "https://dvasquez4155.github.io/Precious-Metals-Calculator",
+        "github" : "https://github.com/DVasquez4155/Precious-Metals-Calculator",
+        "image" : "https://dvasquez4155.github.io/Precious-Metals-Calculator/assets/img/icon.png",
+        "time": 2020
+    },
+    {
+        "name": "Employee Summary",
+        "github" : "https://github.com/DVasquez4155/Employee-Summary",
+        "image" : "https://dvasquez4155.github.io/Employee-Summary/assets/img/icon.gif",
+        "time": 2020
+    },
+    {
+        "name": "ReadMe Generator",
+        "github" : "https://github.com/DVasquez4155/ReadMe-Generator",
+        "image" : "https://raw.githubusercontent.com/DVasquez4155/ReadMe-Generator/master/assets/img/icon.gif",
+        "time": 2020
+    },
+    {
+        "name": "Note Taker",
+        "url" : "https://note-taker-dvasquez4155.herokuapp.com/",
+        "github" : "https://github.com/DVasquez4155/Note-Taker",
+        "image" : "https://raw.githubusercontent.com/DVasquez4155/Note-Taker/master/assets/img/icon.png",
+        "time": 2020
+    },
+    {
+        "name": "Viral Restaurant",
+        "url" : "https://viral-restaurant-dvasquez4155.herokuapp.com/",
+        "github" : "https://github.com/DVasquez4155/Viral-Restaurant",
+        "image" : "https://raw.githubusercontent.com/DVasquez4155/Viral-Restaurant/master/assets/img/icon.png",
+        "time": 2020
+    },
+    {
+        "name": "Employee Tracker",
+        "github" : "https://github.com/DVasquez4155/Employee-Tracker",
+        "image" : "https://raw.githubusercontent.com/DVasquez4155/Employee-Tracker/master/assets/img/icon.gif",
+        "time": 2020
+    },
+    {
+        "name": "Eat Da Burger",
+        "url" : "https://eat-da-burger-dvasquez4155.herokuapp.com/",
+        "github" : "https://github.com/DVasquez4155/Eat-Da-Burger",
+        "image" : "https://raw.githubusercontent.com/DVasquez4155/Eat-Da-Burger/master/assets/img/icon.png",
+        "time": 2020
+    },
+    {
+        "name": "Node.JS Heruko Tutorial",
+        "github" : "https://github.com/DVasquez4155/Node.JS-Heruko-Tutorial",
+        "image" : "https://raw.githubusercontent.com/DVasquez4155/Node.JS-Heruko-Tutorial/master/assets/img/icon.png",
+        "time": 2020
+    },
+    {
+        "name": "🚀SHIPS🚀",
+        "url" : "https://stormy-badlands-59062.herokuapp.com/",
+        "github" : "https://github.com/DVasquez4155/Group-Project-2",
+        "image" : "https://raw.githubusercontent.com/DVasquez4155/Group-Project-2/master/assets/img/icon.png",
+        "time": 2020
+    }
+]

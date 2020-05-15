@@ -1,0 +1,70 @@
+/* * {
+  box-sizing: border-box;
+}
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+html,
+body,
+#root,
+#root > div,
+div[data-reactroot] {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+div.avatar {
+  background-image: url(&quot;assets/img/avatars/avatar.png&quot;);
+}
+
+body > .social-icons {
+  color: #313437;
+  background-color: #fff;
+  text-align: center;
+  padding: 70px 0;
+}
+
+@media (max-width:767px) {
+  .social-icons {
+    padding: 50px 0;
+  }
+}
+
+.portfolio-navbar.fixed-top+.page {
+    padding-top: 62px;
+}
+@media (min-width: 576px){
+  .portfolio-navbar.fixed-top+.page {
+      padding-top: 5.5rem;
+  }
+}
+article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
+    display: block;
+}
+*, :after, :before {
+    box-sizing: border-box;
+}
+user agent stylesheet
+main {
+    display: block;
+} */
+
+/* .social-icons i {
+  font-size: 32px;
+  display: inline-block;
+  color: #757980;
+  margin: 0 10px;
+  width: 60px;
+  height: 60px;
+  border: 1px solid #c8ced7;
+  text-align: center;
+  border-radius: 50%;
+  line-height: 60px;
+}
+.social-icons {
+  color: #313437;
+  background-color: #fff;
+  text-align: center;
+  padding: 70px 0;
+} */
