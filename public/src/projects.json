@@ -106,5 +106,26 @@
         "github" : "https://github.com/DVasquez4155/Group-Project-2",
         "image" : "https://raw.githubusercontent.com/DVasquez4155/Group-Project-2/master/assets/img/icon.png",
         "time": 2020
+    },
+    {
+        "name": "Workout Tracker",
+        "url" : "https://workout-tracker-dvasquez4155.herokuapp.com/",
+        "github" : "https://github.com/DVasquez4155/Workout-Tracker",
+        "image" : "https://raw.githubusercontent.com/DVasquez4155/Workout-Tracker/master/assets/img/icon.png",
+        "time": 2020
+    },
+    {
+        "name": "Budget Tracker",
+        "url" : "https://budget-app-dvasquez4155.herokuapp.com/",
+        "github" : "https://github.com/DVasquez4155/Budget-Tracker",
+        "image" : "https://raw.githubusercontent.com/DVasquez4155/Budget-Tracker/master/assets/img/icon.png",
+        "time": 2020
+    },
+    {
+        "name": "Employee Directory",
+        "url" : "https://dvasquez4155.github.io/Employee-Directory/",
+        "github" : "https://github.com/DVasquez4155/Employee-Directory",
+        "image" : "https://github.com/DVasquez4155/Employee-Directory/raw/master/assets/img/icon.png",
+        "time": 2020
     }
 ]
