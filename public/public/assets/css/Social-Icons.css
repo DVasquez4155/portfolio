@@ -1,4 +1,4 @@
-body > div > main > .social-icons {
+body > .social-icons {
   color: #313437;
   background-color: #fff;
   text-align: center;
@@ -6,12 +6,12 @@ body > div > main > .social-icons {
 }
 
 @media (max-width:767px) {
-  body > div > main > .social-icons {
+  bpdy > .social-icons {
     padding: 50px 0;
   }
 }
 
-body > div > main > .social-icons i {
+body > .social-icons i {
   font-size: 32px;
   display: inline-block;
   color: #757980;
