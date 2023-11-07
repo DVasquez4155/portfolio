@@ -7,13 +7,13 @@ function Navbar() {
           <a className="text-secondary" href="https://github.com/DVasquez4155">
             <i className="fab fa-github"></i>
           </a>
-          <a className="linkedin" href="https://www.linkedin.com/in/dvasquez4155">
+          <a className="linkedin" href="https://www.linkedin.com/in/dvasquezt">
             <i className="icon ion-social-linkedin"></i>
           </a>
           <a className="text-success" href="mailto:main@dvasquez4155.com">
             <i className="icon ion-email"></i>
           </a>
-          <a className="instagram" href="https://www.instagram.com/dvasquez4155/">
+          <a className="instagram" href="https://www.instagram.com/wdan193/">
             <i className="icon ion-social-instagram"></i>
           </a>
         </div>

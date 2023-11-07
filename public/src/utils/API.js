@@ -1,6 +1,7 @@
 import axios from "axios";
-export default {
+const API = {
   send: function(form) {
-    return axios.post("https://www.dvasquez4155.com/api/contact", form);
+    return axios.post("https://api.portfolio.dvas4155.com/api/contact", form);
   }
-};
+}
+export default API;

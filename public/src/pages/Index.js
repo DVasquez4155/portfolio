@@ -11,6 +11,12 @@ class Index extends Component {
         <div className="social-icons">
             <h2>Skills</h2>
             <hr />
+            <figure className="figure"><i className="icon fab fa-microsoft"></i>
+                <figcaption className="figure-caption">Microsoft Office</figcaption>
+            </figure>
+            <figure className="figure"><i className="icon fab fa-wordpress"></i>
+                <figcaption className="figure-caption">Wordpress</figcaption>
+            </figure>
             <figure className="figure"><i className="icon ion-social-html5"></i>
                 <figcaption className="figure-caption">HTML 5</figcaption>
             </figure>
@@ -36,7 +42,7 @@ class Index extends Component {
                 <figcaption className="figure-caption">Java</figcaption>
             </figure>
         </div>
-        <div data-aos="fade" className="simple-slider">
+        {/* <div data-aos="fade" className="simple-slider">
             <div className="swiper-container">
                 <div className="swiper-wrapper">
                     <div className="swiper-slide" style={{backgroundImage: "url(assets/img/nature/forrest.png)"}}></div>
@@ -47,7 +53,7 @@ class Index extends Component {
                 <div className="swiper-button-prev"></div>
                 <div className="swiper-button-next"></div>
             </div>
-        </div>
+        </div> */}
     </main>
 );
 }}

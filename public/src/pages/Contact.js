@@ -1,5 +1,56 @@
 import React, { Component } from "react"
+import Modal from 'react-bootstrap/Modal';
+import Button from 'react-bootstrap/Button';
+import API from "../utils/API";
+
 class Contact extends Component {
+    state = {
+        buttonStyle: {},
+        modalStyle: false,
+        disabled: false,
+        modalMessage: ""
+    }
+    handleClose = () => this.setState({modalStyle : false});
+    handleShow = () => this.setState({modalStyle : true});
+    success() {
+        this.setState({modalMessage : 'Thank you for taking the time on contacting me!'});
+        this.setState({buttonStyle : {'display': 'none'}});
+        this.setState({disabled : true});
+        this.handleShow()
+    }
+    error() {
+        this.setState({modalMessage : 'Oops! There was a problem.'})
+        this.handleShow();
+    }
+    handleSubmit(e) {
+        // Send data to the backend via POST
+        e.preventDefault();
+        const data = {
+            name: e.target.name.value.trim(),
+            email: e.target.email.value.trim(),
+            subject: e.target.subject.value.trim(),
+            message: e.target.message.value.trim(),
+        }
+        API.send(data)
+        .then(function (response) {
+            console.log(response);
+        })
+        .catch(function (error) {
+            console.log(error);
+        });
+        // $.ajax({
+        //     type: form.method,
+        //     url: form.action,
+        //     data: data
+        // })
+        // .done(() => {success()})
+        // .fail(() => {error()})
+        // fetch('https://api.portfolio.dvas4155.com/api/contact/', {  // Enter your IP address here
+        //     method: 'POST',
+        //     mode: 'cors',
+        //     body: JSON.stringify() // body data type must match "Content-Type" header
+        // })
+    }
     render() {
     return (
     <main className="page contact-page">
@@ -8,27 +59,26 @@ class Contact extends Component {
                 <div className="heading">
                     <h2>Contact me</h2>
                 </div>
-                <form name="form" action="/api/contact" method="post">
-                    <div className="form-group"><label htmlFor="name">Your Name</label><input className="form-control item" type="text" id="name" required="" name="name" /></div>
-                    <div className="form-group"><label htmlFor="email">Email</label><input className="form-control item" type="email" id="email" required="" name="email" /></div>
-                    <div className="form-group"><label htmlFor="subject">Subject</label><input className="form-control item" type="text" id="subject" name="subject" required="" /></div>
-                    <div className="form-group"><label htmlFor="message">Message</label><textarea className="form-control item" id="message" name="message" required=""></textarea></div>
-                    <div className="form-group"><button className="btn btn-primary btn-block btn-lg" id="submit" type="button">Submit Form</button></div>
+                <form name="form" onSubmit={this.handleSubmit.bind(this)}>
+                    <div className="form-group"><label htmlFor="name">Your Name</label><input className="form-control item" disabled={this.state.disabled} type="text" id="name" required="" name="name" /></div>
+                    <div className="form-group"><label htmlFor="email">Email</label><input className="form-control item" disabled={this.state.disabled} type="email" id="email" required="" name="email" /></div>
+                    <div className="form-group"><label htmlFor="subject">Subject</label><input className="form-control item" disabled={this.state.disabled} type="text" id="subject" name="subject" required="" /></div>
+                    <div className="form-group"><label htmlFor="message">Message</label><textarea className="form-control item" disabled={this.state.disabled} id="message" name="message" required=""></textarea></div>
+                    <div className="form-group"><button className="btn btn-primary btn-block btn-lg " style={this.state.buttonStyle} id="submit" type="submit">Submit Form</button></div>
                 </form>
             </div>
         </section>
-        <div className="modal fade" role="dialog" tabIndex="-1" id="statusBody">
-        <div className="modal-dialog" role="document">
-            <div className="modal-content">
-                <div className="modal-header">
-                    <h4 className="modal-title">Status</h4><button type="button" className="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button></div>
-                <div className="modal-body">
-                    <p id="statusMessage"></p>
-                </div>
-                <div className="modal-footer"><button className="btn btn-primary" type="button" data-dismiss="modal">Close</button></div>
-            </div>
-        </div>
-    </div>
+        <Modal show={this.state.modalStyle} onHide={this.handleClose}>
+            <Modal.Header closeButton>
+            <Modal.Title>Status</Modal.Title>
+            </Modal.Header>
+            <Modal.Body>{this.state.modalMessage}</Modal.Body>
+            <Modal.Footer>
+            <Button variant="secondary" onClick={this.handleClose}>
+                Close
+            </Button>
+            </Modal.Footer>
+        </Modal>
     </main>
     );
 }}

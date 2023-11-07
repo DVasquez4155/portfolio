@@ -26,7 +26,6 @@ module.exports = (form) => {
         text: form.message,
         html: html
     };
-    
     transporter.sendMail(mailOptions, function (error, info) {
         if (error) {
             console.log(error);

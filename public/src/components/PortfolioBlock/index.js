@@ -1,6 +1,6 @@
 import "./style.css";
 import React from "react";
-import avatar from './avatar.png';
+import avatar from './avatar.jpg';
 function PortfolioBlock(props) {
     return (
         <section className="portfolio-block block-intro">

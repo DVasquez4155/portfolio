@@ -1,0 +1,37 @@
+[
+    {
+        "name": "Western Governors University",
+        "subject": "Cyber Security",
+        "time": "12/2023 - Present",
+        "description": "",
+        "skills": ""
+    },
+    {
+        "name": "UC Davis",
+        "subject": "Coding Bootcamp",
+        "time": "12/2019 - 06/2020",
+        "description": "",
+        "skills": "HTML, CSS, JavaScript, Node.js, MySQL, NoSQL, MERN"
+    },
+    {
+        "name": "De Anza College",
+        "subject": "Computer Science",
+        "time": "09/2017 - 12/2019",
+        "description": "",
+        "skills": "C++, Java, Linux"
+    },
+    {
+        "name": "Silicon Valley Career Technical Education",
+        "subject": "Mobile App Design & Computer Coding",
+        "time": "09/2016 - 05/2017",
+        "description": "",
+        "skills": "HTML, CSS, JavaScript, Swift"
+    },
+    {
+        "name": "High School",
+        "subject": "",
+        "time": "09/2013 - 05/2017",
+        "description": "",
+        "skills": ""
+    }
+]
