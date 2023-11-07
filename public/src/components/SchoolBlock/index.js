@@ -10,7 +10,7 @@ function SchoolBlock(props) {
                     <h3>{props.props.name}</h3>
                     {
                         props.props.subject !== "" &&
-                        <h4 className="organization">{props.props.subject}</h4>
+                        <p className="text-muted"><strong>{props.props.subject}</strong></p>
                     }
                 </div>
                 <div className="col-md-6"><span className="period">{props.props.time}<br /></span></div>

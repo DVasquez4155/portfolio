@@ -8,7 +8,7 @@ function PortfolioBlock(props) {
             <Row>
                 <div className="col-md-6">
                     <h3>{props.props.position}</h3>
-                    <h4 className="organization">{props.props.location}</h4>
+                    <p className="text-muted"><strong>{props.props.location}</strong></p>
                 </div>
                 <div className="col-md-6"><span className="period">{props.props.time}<br /></span></div>
             </Row>
