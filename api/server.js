@@ -23,6 +23,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // Static directory
 app.use(express.static(path.join(__dirname, "../public/build")));
 app.get("/*", function(req, res) {
+  console.log(req.params.url)
   res.sendFile((path.join(__dirname, "../public/build/index.html")));
 });
 
