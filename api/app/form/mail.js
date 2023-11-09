@@ -18,7 +18,7 @@ module.exports = (form) => {
     });
     const source = fs.readFileSync(`${process.cwd()}/views/mail.html`, 'utf8');
     const template = Handlebars.compile(source);
-    const context = {message:form.message, time: currentTime};
+    const context = {...form};
     const html = template(context);
     const recipient = process.env[form.uuid] || process.env.email;
     console.log(recipient)
