@@ -1,5 +1,4 @@
 const mail = require("../form/mail");
-const moment = require('moment-timezone');
 module.exports = function (app) {
     app.post("/api/contact", (req, res) => {
         mail({
@@ -8,8 +7,7 @@ module.exports = function (app) {
             email: req.body.email,
             subject: req.body.subject,
             message: req.body.message,
-            time: moment().tz('America/Los_Angeles').format('LLLL')
+            res: res
         })
-        res.send(req.body)
     })
 };
