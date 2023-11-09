@@ -33,23 +33,11 @@ class Contact extends Component {
         }
         API.send(data)
         .then(function (response) {
-            console.log(response);
+            this.success()
         })
         .catch(function (error) {
-            console.log(error);
+            this.error()
         });
-        // $.ajax({
-        //     type: form.method,
-        //     url: form.action,
-        //     data: data
-        // })
-        // .done(() => {success()})
-        // .fail(() => {error()})
-        // fetch('https://api.portfolio.dvas4155.com/api/contact/', {  // Enter your IP address here
-        //     method: 'POST',
-        //     mode: 'cors',
-        //     body: JSON.stringify() // body data type must match "Content-Type" header
-        // })
     }
     render() {
     return (
