@@ -23,8 +23,9 @@ module.exports = (form) => {
     const recipient = process.env[form.uuid] || process.env.email;
     console.log(recipient)
     const mailOptions = {
-        from: `"${form.name}" <${form.email}>`,
+        from: `"Portfolio Contact Alert" <contact@dvasquez4155.com>`,
         to: recipient,
+        replyTo: `"${form.name}" <${form.email}>`,
         subject: form.subject,
         text: form.message,
         html: html
