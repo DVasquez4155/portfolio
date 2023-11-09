@@ -20,17 +20,16 @@ app.use(compression());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
+// Routes
+require("./app/routes/api.js")(app);
+require("./app/routes/html.js")(app);
 // Static directory
 app.use(express.static(path.join(__dirname, "../public/build")));
 app.get("/*", function(req, res) {
-  console.log(req.params.url)
   res.sendFile((path.join(__dirname, "../public/build/index.html")));
 });
 
 app.use(cors());
-// Routes
-require("./app/routes/api.js")(app);
-require("./app/routes/html.js")(app);
 
 // Starts the server to begin listening
 app.listen(PORT, function() {
