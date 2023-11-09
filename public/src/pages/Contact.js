@@ -1,28 +1,30 @@
-import React, { Component } from "react"
+import React, { useState } from "react"
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
 import API from "../utils/API";
 
-class Contact extends Component {
-    state = {
-        buttonStyle: {},
-        modalStyle: false,
-        disabled: false,
-        modalMessage: ""
-    }
-    handleClose = () => this.setState({modalStyle : false});
-    handleShow = () => this.setState({modalStyle : true});
-    success() {
-        this.setState({modalMessage : 'Thank you for taking the time on contacting me!'});
-        this.setState({buttonStyle : {'display': 'none'}});
-        this.setState({disabled : true});
-        this.handleShow()
-    }
-    error() {
-        this.setState({modalMessage : 'Oops! There was a problem.'})
-        this.handleShow();
-    }
-    handleSubmit(e) {
+const Contact = () => {
+    const [buttonStyle, setButtonStyle] = useState({});
+    const [modalStyle, showModal] = useState(false);
+    const [disabled, disableForm] = useState(false);
+    const [modalMessage, setModalMessage] = useState("");
+    function handleClose ()  {
+        showModal(false)
+    };
+    function handleShow ()  {
+        showModal(true)
+    };
+    function success ()  {
+        setModalMessage('Thank you for taking the time on contacting me!');
+        setButtonStyle({'display': 'none'});
+        disableForm(true);
+        handleShow()
+    };
+    function error()  {
+        setModalMessage('Oops! There was a problem.')
+        handleShow();
+    };
+    function handleSubmit (e)  {
         // Send data to the backend via POST
         e.preventDefault();
         const data = {
@@ -32,14 +34,13 @@ class Contact extends Component {
             message: e.target.message.value.trim(),
         }
         API.send(data)
-        .then(function (response) {
-            this.success()
+        .then(function (e) {
+            success()
         })
-        .catch(function (error) {
-            this.error()
+        .catch(function (e) {
+            error()
         });
     }
-    render() {
     return (
     <main className="page contact-page">
         <section className="portfolio-block contact">
@@ -47,28 +48,28 @@ class Contact extends Component {
                 <div className="heading">
                     <h2>Contact me</h2>
                 </div>
-                <form name="form" onSubmit={this.handleSubmit.bind(this)}>
-                    <div className="form-group"><label htmlFor="name">Your Name</label><input className="form-control item" disabled={this.state.disabled} type="text" id="name" required="" name="name" /></div>
-                    <div className="form-group"><label htmlFor="email">Email</label><input className="form-control item" disabled={this.state.disabled} type="email" id="email" required="" name="email" /></div>
-                    <div className="form-group"><label htmlFor="subject">Subject</label><input className="form-control item" disabled={this.state.disabled} type="text" id="subject" name="subject" required="" /></div>
-                    <div className="form-group"><label htmlFor="message">Message</label><textarea className="form-control item" disabled={this.state.disabled} id="message" name="message" required=""></textarea></div>
-                    <div className="form-group"><button className="btn btn-primary btn-block btn-lg " style={this.state.buttonStyle} id="submit" type="submit">Submit Form</button></div>
+                <form name="form" onSubmit={handleSubmit}>
+                    <div className="form-group"><label htmlFor="name">Your Name</label><input className="form-control item" disabled={disabled} type="text" id="name" required="" name="name" /></div>
+                    <div className="form-group"><label htmlFor="email">Email</label><input className="form-control item" disabled={disabled} type="email" id="email" required="" name="email" /></div>
+                    <div className="form-group"><label htmlFor="subject">Subject</label><input className="form-control item" disabled={disabled} type="text" id="subject" name="subject" required="" /></div>
+                    <div className="form-group"><label htmlFor="message">Message</label><textarea className="form-control item" disabled={disabled} id="message" name="message" required=""></textarea></div>
+                    <div className="form-group"><button className="btn btn-primary btn-block btn-lg " style={buttonStyle} id="submit" type="submit">Submit Form</button></div>
                 </form>
             </div>
         </section>
-        <Modal show={this.state.modalStyle} onHide={this.handleClose}>
+        <Modal show={modalStyle} onHide={handleClose}>
             <Modal.Header closeButton>
             <Modal.Title>Status</Modal.Title>
             </Modal.Header>
-            <Modal.Body>{this.state.modalMessage}</Modal.Body>
+            <Modal.Body>{modalMessage}</Modal.Body>
             <Modal.Footer>
-            <Button variant="secondary" onClick={this.handleClose}>
+            <Button variant="secondary" onClick={handleClose}>
                 Close
             </Button>
             </Modal.Footer>
         </Modal>
     </main>
     );
-}}
+}
 
 export default Contact;
