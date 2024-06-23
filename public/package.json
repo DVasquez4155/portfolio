@@ -4,10 +4,10 @@
   "private": true,
   "homepage": "https://dvasquez4155.github.io/",
   "dependencies": {
-    "axios": "^1.6.0",
+    "axios": "^1.7.2",
     "bootstrap": "^4.6.2",
     "react": "^16.14.0",
-    "react-bootstrap": "^1.6.7",
+    "react-bootstrap": "^1.6.8",
     "react-dom": "^16.14.0",
     "react-router-dom": "^5.3.4"
   },
