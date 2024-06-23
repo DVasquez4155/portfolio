@@ -49,7 +49,7 @@ class Index extends Component {
             <hr />
             <div className="badge-holder">
                 <div id="badge">
-                    <a target="_blank" href="https://www.credly.com/badges/7a4ee715-e7c2-4429-bb29-e75a57820ca2/embedded">
+                    <a target="_blank" rel="noopener noreferrer" href="https://www.credly.com/badges/7a4ee715-e7c2-4429-bb29-e75a57820ca2/embedded">
                         <img width="105" height="105" alt="" src="https://images.credly.com/images/63482325-a0d6-4f64-ae75-f5f33922c7d0/CompTIA_A_2Bce.png" />
                             <span id="badge-name">CompTIA A+</span>
                     </a><div id="badge-issuer" title="CompTIA">
