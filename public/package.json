@@ -2,14 +2,21 @@
   "name": "portfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://dvasquez4155.github.io/",
+  "homepage": "./",
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.5.2",
+    "@fortawesome/free-brands-svg-icons": "^6.5.2",
+    "@fortawesome/free-regular-svg-icons": "^6.5.2",
+    "@fortawesome/free-solid-svg-icons": "^6.5.2",
+    "@fortawesome/react-fontawesome": "^0.2.1",
     "axios": "^1.7.2",
     "bootstrap": "^4.6.2",
-    "react": "^16.14.0",
-    "react-bootstrap": "^1.6.8",
-    "react-dom": "^16.14.0",
-    "react-router-dom": "^5.3.4"
+    "react": "^18.1.0",
+    "react-bootstrap": "^2.4.0",
+    "react-chartjs-2": "^5.2.0",
+    "react-dom": "^18.1.0",
+    "react-router-dom": "^6.30.0",
+    "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "react-scripts start",

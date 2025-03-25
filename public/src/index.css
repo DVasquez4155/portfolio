@@ -19,8 +19,10 @@ html, body {
   -webkit-border-radius: 3px;
   border-radius: 3px;
   width: 150px;
-  /* height: 240px; */
+  /* height: 270px; */
   margin-inline: auto;
+  display: inline-block;
+  margin: 3px;
 }
 #badge {
 

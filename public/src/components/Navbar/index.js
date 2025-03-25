@@ -1,5 +1,6 @@
 import React from "react";
 
+import { Link } from "react-router-dom";
 // Depending on the current path, this component sets the "active" class on the appropriate navigation link item
 function Navbar() {
   return (
@@ -13,16 +14,16 @@ function Navbar() {
             <div className="collapse navbar-collapse" id="navbarNav">
                 <ul className="nav navbar-nav ml-auto">
                     <li className="nav-item">
-                      <a className="nav-link active" href="/">Home</a>
+                      <Link className="nav-link active" to="/">Home</Link>
                     </li>
                     <li className="nav-item">
-                      <a className="nav-link" href="/projects">Projects</a>
+                      <Link className="nav-link" to="/projects">Projects</Link>
                     </li>
                     <li className="nav-item">
-                      <a className="nav-link" href="/cv">CV</a>
+                      <Link className="nav-link" to="/cv">CV</Link>
                     </li>
                     <li className="nav-item">
-                      <a className="nav-link" href="/contact">Contact</a>
+                      <Link className="nav-link" to="/contact">Contact</Link>
                     </li>
                 </ul>
         </div>

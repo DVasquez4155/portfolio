@@ -1,5 +1,10 @@
+
+import {
+  Routes,
+  Route,
+  HashRouter
+} from "react-router-dom";
 import React from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
@@ -14,18 +19,18 @@ import Error from "./pages/Error";
 
 function App() {
   return (
-    <Router>
+    <HashRouter>
         <Navbar />
-        <Switch>
-          <Route path="/" exact  component={Index} />
-          <Route path="/cv" component={Cv} />
-          <Route path="/about" component={Cv} />
-          <Route  exact path="/contact" component={Contact} />
-          <Route  exact path="/projects" component={Projects} />
-          <Route component={Error} />
-        </Switch>
+        <Routes>
+          <Route path="/" element={<Index />} />
+          <Route path="cv" element={<Cv />} />
+          <Route path="about" element={<Cv />} />
+          <Route path="contact" element={<Contact />} />
+          <Route path="projects" element={<Projects />} />
+          <Route component={<Error />} />
+        </Routes>
         <Footer />
-    </Router>
+    </HashRouter>
   );
 }
 
